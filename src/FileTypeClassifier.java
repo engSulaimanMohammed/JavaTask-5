@@ -25,7 +25,23 @@ public class FileTypeClassifier {
             if (dotIndex == -1) {
                 type = "Other";
                 other++;
+            } else {
+                String extension = fileName.substring(dotIndex + 1).toLowerCase();
+                if (extension.equals("txt") || extension.equals("pdf") || extension.equals("docx")) {
+                    type = "Document";
+                    Document++;
+                } else if (extension.equals("jpg") || extension.equals("png")) {
+                    type = "Image";
+                    Image++;
+                } else if (extension.equals("java") || extension.equals("py") || extension.equals("js")) {
+                    type = "Code";
+                    Code++;
+                } else {
+                    type = "Other";
+                    other++;
+                }
             }
+            IO.println(fileName + " : " + type);
         }
 
     }
