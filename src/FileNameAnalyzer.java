@@ -24,10 +24,11 @@ public class FileNameAnalyzer {
         } else {
             classification = "Other";
         }
-
-
-
-
+        IO.println("File name: " + fileName);
+        IO.println("Base name: " + baseName);
+        IO.println("Extension: " + extension);
+        IO.println("Classification: " + classification);
+        input.close();
     }
 }
 
