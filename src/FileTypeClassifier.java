@@ -44,5 +44,10 @@ public class FileTypeClassifier {
             IO.println(fileName + " : " + type);
         }
 
+        IO.println("\nTotal files: " + FileNames.size());
+        IO.println("Document: " + Document);
+        IO.println("Image: " + Image);
+        IO.println("Code: " + Code);
+        IO.println("Other: " + other);
     }
 }
