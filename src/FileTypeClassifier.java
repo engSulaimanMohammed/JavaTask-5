@@ -15,5 +15,18 @@ public class FileTypeClassifier {
         FileNames.add("music.mp3");
         FileNames.add("README");
 
+        int Document = 0;
+        int Image = 0;
+        int Code = 0;
+        int other = 0;
+        for (String fileName : FileNames) {
+            int dotIndex = fileName.lastIndexOf('.');
+            String type;
+            if (dotIndex == -1) {
+                type = "Other";
+                other++;
+            }
+        }
+
     }
 }
