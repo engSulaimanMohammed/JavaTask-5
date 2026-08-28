@@ -32,7 +32,11 @@ public class FilePathSplitter {
         } else {
             pathStyle = "Unix Path";
         }
-
-
+        IO.println("Path: " + Path);
+        IO.println("Folder: " + folder);
+        IO.println("File Name: " + fileName);
+        IO.println("Extension: " + extension);
+        IO.println("Path Style: " + pathStyle);
+        input.close();
     }
 }
