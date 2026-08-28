@@ -11,5 +11,16 @@ public class FileInventoryReport {
         int otherCount = 0;
         String largestFile = "";
         int largestSize = 0;
+
+        for (String record : records) {
+            String[] parts = record.split(",");
+            if (parts.length != 2) {
+                System.out.println("Invalid record: " + record);
+                continue;
+            }
+            String fileName = parts[0].trim();
+            int size = Integer.parseInt(parts[1].trim());
+            int dotIndex = fileName.lastIndexOf('.');
+        }
     }
 }
