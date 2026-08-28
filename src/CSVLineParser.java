@@ -19,6 +19,15 @@ public class CSVLineParser {
         String city = fields[2].trim();
 
         int age = Integer.parseInt(ageText);
+        String ageGroup;
+
+        if (age < 18) {
+            ageGroup = "Minor";
+        } else if (age <= 64) {
+            ageGroup = "Adult";
+        } else {
+            ageGroup = "Senior";
+        }
     }
 }
 
