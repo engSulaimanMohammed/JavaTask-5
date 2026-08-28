@@ -28,6 +28,11 @@ public class CSVLineParser {
         } else {
             ageGroup = "Senior";
         }
+        IO.println("Name: " + name);
+        IO.println("Age: " + age);
+        IO.println("City: " + city);
+        IO.println("Age Group: " + ageGroup);
+        input.close();
     }
 }
 
