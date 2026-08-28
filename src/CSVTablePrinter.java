@@ -14,9 +14,20 @@ public class CSVTablePrinter {
 
         String[] headers = rows.get(0).split(",");
         String format = "%-12s %-8s %-12s%n";
+
         System.out.printf(format, headers[0], headers[1], headers[2]);
         IO.println("-".repeat(34));
+
         int shownRows = 0;
+        for (int i = 1; i < rows.size(); i++) {
+            String row = rows.get(i);
+            String[] fields = row.split(",");
+            if (fields.length != headers.length) {
+                IO.println("Skipping malformed row: " + row);
+                continue;
+            }
+        }
+
 
     }
 }
