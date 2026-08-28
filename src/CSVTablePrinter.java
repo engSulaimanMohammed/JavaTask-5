@@ -26,8 +26,13 @@ public class CSVTablePrinter {
                 IO.println("Skipping malformed row: " + row);
                 continue;
             }
+            System.out.printf(format,
+                    fields[0].trim(),
+                    fields[1].trim(),
+                    fields[2].trim());
+            shownRows++;
         }
-
-
+        IO.println();
+        IO.println("Data rows shown: " + shownRows);
     }
 }
