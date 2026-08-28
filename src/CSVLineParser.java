@@ -12,8 +12,6 @@ public class CSVLineParser {
             println("Invalid record.");
             return;
         }
-        input.close();
-
         String name = fields[0].trim();
         String ageText = fields[1].trim();
         String city = fields[2].trim();

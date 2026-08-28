@@ -9,7 +9,6 @@ public class FilePathSplitter {
             IO.println("Invalid path.");
             return;
         }
-        input.close();
         boolean isWindows = Path.contains("\\");
         Path = Path.replace('\\', '/');
 
