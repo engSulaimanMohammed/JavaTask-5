@@ -21,6 +21,32 @@ public class FileInventoryReport {
             String fileName = parts[0].trim();
             int size = Integer.parseInt(parts[1].trim());
             int dotIndex = fileName.lastIndexOf('.');
+
+            String extension;
+
+            if (dotIndex == -1) {
+                extension = "";
+            } else {
+                extension = fileName.substring(dotIndex + 1).toLowerCase();
+            }
+            String type;
+            if (extension.equals("txt") || extension.equals("pdf") ||
+                    extension.equals("docx") || extension.equals("xlsx")) {
+                type = "Document";
+                documentCount++;
+            } else if (extension.equals("jpg") || extension.equals("png") || extension.equals("gif")) {
+                type = "Image";
+                imageCount++;
+            } else if (extension.equals("mp3") || extension.equals("wav")) {
+                type = "Audio";
+                audioCount++;
+            } else if (extension.equals("java") || extension.equals("py") || extension.equals("js")) {
+                type = "Code";
+                codeCount++;
+            } else {
+                type = "Other";
+                otherCount++;
+            }
         }
     }
 }
