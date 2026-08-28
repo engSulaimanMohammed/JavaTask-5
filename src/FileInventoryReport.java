@@ -47,6 +47,13 @@ public class FileInventoryReport {
                 type = "Other";
                 otherCount++;
             }
+            totalSize += size;
+            if (size > largestSize) {
+                largestSize = size;
+                largestFile = fileName;
+            }
+            IO.println("File: " + fileName + " | Extension: " + extension +
+                    " | Type: " + type + " | Size: " + size + " KB" );
         }
     }
 }
