@@ -12,5 +12,11 @@ public class CSVTablePrinter {
                 "Khalid,35,Sur",
                 "Wrong,Row");
 
+        String[] headers = rows.get(0).split(",");
+        String format = "%-12s %-8s %-12s%n";
+        System.out.printf(format, headers[0], headers[1], headers[2]);
+        IO.println("-".repeat(34));
+        int shownRows = 0;
+
     }
 }
