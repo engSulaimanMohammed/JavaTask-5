@@ -55,5 +55,20 @@ public class FileInventoryReport {
             IO.println("File: " + fileName + " | Extension: " + extension +
                     " | Type: " + type + " | Size: " + size + " KB" );
         }
+        IO.println("\n*****   File Inventory Summary   *****");
+
+        int totalFiles = documentCount +
+                imageCount +
+                audioCount +
+                codeCount +
+                otherCount;
+        IO.println("Total files: " + totalFiles);
+        IO.println("Total size: " + totalSize + " KB");
+        IO.println("Document: " + documentCount);
+        IO.println("Image: " + imageCount);
+        IO.println("Audio: " + audioCount);
+        IO.println("Code: " + codeCount);
+        IO.println("Other: " + otherCount);
+        IO.println("Largest file: " + largestFile + " (" + largestSize + " KB)");
     }
 }
